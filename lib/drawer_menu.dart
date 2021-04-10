@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:webviewDemo/Screens/Signup/components/body.dart';
 import 'package:webviewDemo/Screens/Signup/signup_screen.dart';
-import 'package:webviewDemo/Screens/app/news_screen.dart';
-import 'package:webviewDemo/lamdum.dart';
-import 'package:webviewDemo/doctor.dart';
+import 'package:webviewDemo/Screens/app/clae.dart';
 
+import 'package:webviewDemo/lamdum.dart';
+import 'package:webviewDemo/doc.dart';
 import 'package:webviewDemo/profile.dart';
 
 class DrawerMenu extends StatefulWidget {
@@ -22,11 +21,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
     padding: EdgeInsets.zero,
     children: <Widget>[
       UserAccountsDrawerHeader(
-        accountName: Text('Wachiraporn & Suphattra '), 
-        accountEmail: Text('Wachirporn.mara61@sskru.ac.th'),
+        accountName: Text('คลีนิคสัตว์ '), 
+        accountEmail: Text('เมนู'),
         currentAccountPicture: CircleAvatar(
-          child: FlutterLogo(
-            size: 40.0,
+           child: Image.asset(
+                      "assets/images/1113.png",
+                      height: 100.9,
           ),
           backgroundColor: Colors.white,
         ),
@@ -37,7 +37,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
         onTap: () {
           Navigator.push(
             context, 
-            MaterialPageRoute(builder: (context) => NewsPage()),
+            MaterialPageRoute(builder: (context) => Clae()),
           );
          
         },
@@ -53,7 +53,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
         },
       ),
         ListTile(
-        leading: Icon(Icons.help_outline),
+        leading: Icon(Icons.history),
         title: Text('จองคิว'),
         onTap: () {
            Navigator.push(
@@ -63,7 +63,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
         },
        ),
        ListTile(
-        leading: Icon(Icons.screen_lock_landscape_outlined),
+        leading: Icon(Icons.group_add_sharp),
         title: Text('ปรึกษาหมอ'),
         onTap: () {
            Navigator.push(
@@ -86,7 +86,4 @@ class _DrawerMenuState extends State<DrawerMenu> {
      ),
    );
   }
-}
-
-Doctor() {
 }

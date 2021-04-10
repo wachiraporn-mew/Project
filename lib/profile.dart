@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:webviewDemo/Screens/Welcome/welcome_screen.dart';
-import 'package:webviewDemo/constants.dart';
 import 'package:webviewDemo/drawer_menu.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyProfile extends StatelessWidget {
   MyProfile({Key key}) : super(key: key);
 
-  var sizeBox = 14.0;
+  var sizeBox = 30.0;
 
   TextStyle bulletStyle = GoogleFonts.prompt(
     fontSize: 28,
@@ -45,7 +43,7 @@ class MyProfile extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Center(
                       child: Text(
-                        "วชิราภรณ์ มาระวงค์",
+                        "Aninalclinic",
                         style: bulletStyle,
                       ),
                     ),
@@ -54,8 +52,8 @@ class MyProfile extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.asset(
-                      "assets/images/mew.JPG",
-                      height: 280.0,
+                      "assets/images/1113.png",
+                      height: 250.9,
                     ),
                   ),
                   SizedBox(height: sizeBox),
@@ -63,48 +61,10 @@ class MyProfile extends StatelessWidget {
                     leading: Icon(Icons.person),
                     title: Align(
                       child: new Text(
-                        'สาขาวิชาวิทยาการคอมพิวเตอร์\nคณะศิลปศาสตร์และวิทยาศาสตร์',
+                        'นพญ.แบม สุพัตรา ',
                         style: contentStyle,
                       ),
                       alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "ประวัติการศึกษา",
-                      style: contentBulletStyle,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'จบชั้นประถมศึกษาชั้นป.1 - 6 โรงเรียนวัดมหาพุทธาราม',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'จบชั้นมัธยมศึกษาตอนต้นปีที่ 1 - 3 โรงเรียนกำแพง',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'จบชั้นมัธยมศึกษาตอนปลายปีที่ 4 - 6 วิทยาลัยเทคนิคศรีสะเกษ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
                     ),
                   ),
                   SizedBox(height: sizeBox),
@@ -155,87 +115,7 @@ class MyProfile extends StatelessWidget {
                       alignment: Alignment(-1, 0),
                     ),
                   ),
-                  SizedBox(height: sizeBox),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "ประวัติการทำงาน",
-                      style: contentBulletStyle,
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward),
-                    title: Align(
-                      child: new Text(
-                        'เป็นนักศึกษา\n\nคณะศิลปศาสตร์และวิทยาศาสตร์,\n\nมหาวิทยาลัยราชภัฏศรีสะเกษ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1.8, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "ความสามารถพิเศษ",
-                      style: contentBulletStyle,
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'ตัดต่อ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        ' โปรแกรม adobe',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'แต่งภาพ ',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'การพัฒนาระบบงานเว็บเชอร์วิสด้วย Django Rest Framework',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
-                  SizedBox(height: sizeBox),
-                  ListTile(
-                    leading: Icon(Icons.developer_board),
-                    title: Align(
-                      child: new Text(
-                        'การพัฒนาโมบายแอพพลิเคชันด้วย Flutter',
-                        style: contentStyle,
-                      ),
-                      alignment: Alignment(-1, 0),
-                    ),
-                  ),
+                  
                 ],
               ),
             ),

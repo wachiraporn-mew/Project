@@ -8,10 +8,16 @@ import 'package:webviewDemo/components/rounded_button.dart';
 import 'package:webviewDemo/components/rounded_input_field.dart';
 import 'package:webviewDemo/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:webviewDemo/Screens/app/clae.dart';
 
 class Body extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
+  const Body({
+    Key key,
+  }) : super(key: key);
+   Widget build(BuildContext context) {
+    String username = '';
+    String password = '';
+
     Size size = MediaQuery.of(context).size;
     return Background(
       child: SingleChildScrollView(
@@ -24,19 +30,25 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
-              "assets/icons/signup.svg",
+              "assets/icons/login.svg",
               height: size.height * 0.35,
             ),
             RoundedInputField(
               hintText: "Your Email",
-              onChanged: (value) {},
+              onChanged: (value) {
+                username = value;
+              },
             ),
             RoundedPasswordField(
               onChanged: (value) {},
             ),
             RoundedButton(
               text: "SIGNUP",
-              press: () {},
+               press: () {
+                if (username != '' && password != '') {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Clae()));
+                }
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
